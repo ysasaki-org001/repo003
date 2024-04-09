@@ -6,6 +6,12 @@ env:
     DOCKER_PASSWORD: DOCKER_HUB_PASSWORD
 
 phases:
+  install:
+    runtime-versions:
+      python: 3.9
+    commands:
+      - pip3 install pytest pytest-cov requests
+
   pre_build:
     commands:
       - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com
@@ -20,6 +26,13 @@ phases:
     commands:
       - docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG
       - printf '[{"name":"%s","imageUri":"%s"}]' $CONTAINER_NAME $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG > imagedefinitions.json
+
+reports:
+  pytest_reports:
+    files:
+      - '**/*'
+    base-directory: reports/
+    file-format: JUNITXML
 
 artifacts:
   files:
