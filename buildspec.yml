@@ -29,6 +29,7 @@ phases:
       - cd ../
       - pwd
       - ls
+      - ls reports/
       - docker tag $IMAGE_REPO_NAME:$IMAGE_TAG $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG
 
 
