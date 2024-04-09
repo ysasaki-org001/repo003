@@ -19,4 +19,8 @@ RUN apt-get -y update && apt-get -y install wget
 #COPY ./nginx/entrypoint.sh /bin/
 #RUN ["chmod", "+x", "/bin/entrypoint.sh"]
 #ENTRYPOINT ["/bin/entrypoint.sh"]
+
+ADD ./conf/default.conf /etc/nginx/conf.d/default.conf
+ADD ./src /usr/share/nginx/html
+
 CMD ["nginx", "-g", "daemon off;"]
