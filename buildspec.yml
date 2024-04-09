@@ -38,6 +38,6 @@ artifacts:
 reports:
   pytest_reports:
     files:
-      - '**/*'
-    base-directory: 'reports/'
-    file-format: 'JUnitXML'
+      - pytest_results.xml
+    base-directory: reports/
+    file-format: JUnitXML
