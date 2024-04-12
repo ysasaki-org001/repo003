@@ -45,7 +45,7 @@ phases:
 artifacts:
   files:
     - imagedefinitions.json
-    - imageDetail.json
+#    - imageDetail.json
 
 reports:
   pytest_reports:
