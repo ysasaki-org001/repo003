@@ -42,10 +42,10 @@ phases:
       - cat imageDetail.json
 
 
-# artifacts:
-#   files:
-#     - imagedefinitions.json
-#     - imageDetail.json
+artifacts:
+  files:
+    - imagedefinitions.json
+    - imageDetail.json
 
 reports:
   pytest_reports:
