@@ -46,6 +46,8 @@ artifacts:
   files:
     - imagedefinitions.json
     - imageDetail.json
+    - taskdef.json
+    - appspec.yaml
 
 reports:
   pytest_reports:
