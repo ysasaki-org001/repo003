@@ -80,6 +80,5 @@
         "operatingSystemFamily": "LINUX"
     },
     "registeredAt": "2024-04-13T21:17:21.477Z",
-    "registeredBy": "arn:aws:sts::154642567285:assumed-role/AWSCodePipelineServiceRole-ap-northeast-1-RollingUpdate/1713043041125",
-    "tags": []
+    "registeredBy": "arn:aws:sts::154642567285:assumed-role/AWSCodePipelineServiceRole-ap-northeast-1-RollingUpdate/1713043041125"
 }
