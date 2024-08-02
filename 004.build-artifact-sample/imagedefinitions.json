@@ -1,0 +1,6 @@
+[
+    {
+        "name": "nginx-build-web",
+        "imageUri": "154642567285.dkr.ecr.ap-northeast-1.amazonaws.com/nginx-build:latest"
+    }
+]
